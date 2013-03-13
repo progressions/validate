@@ -1,5 +1,8 @@
-%p Hello
+%p Enter a number exactly 5 characters long.
 
-%input{:type => "text"}
+%form#upc{:action => "/create", :method => "post"}
+  %input#code{:type => "text", :name => "code"}
+  %input#create{:type => "submit", :value => "Proceed to UPC Details", :disabled => true}
 
-.errors
+  .errors
+
