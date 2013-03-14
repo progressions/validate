@@ -1,13 +1,12 @@
 $ ->
-  $("#code").focus()
-  UPC.validate()
-
-  $("#code").typing
-    delay: 200
-    start: UPC.validate
-    stop: UPC.validate
-
-  $("#code").focus()
+  $("#code")
+    .focus()
+    .focus(UPC.validate)
+    .blur(UPC.validate)
+    .typing
+      delay: 200
+      start: UPC.validate
+      stop: UPC.validate
 
   $("#upc").submit(UPC.submit)
     
